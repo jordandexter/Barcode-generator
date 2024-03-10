@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+    <div id="page-container">
+        <h1 id="main-header"> Barcode Generator</h1>
+        <p> Enter the data to be barcode-ified in the text box below
+            or choose a text file.
+        </p>
+        <div class="search-container">
+            <form method="POST">
+                <input class="search-bar" type="text", placeholder="Enter your data..." name="submission">
+            </form>
+            <input type="file">
+        </div>
+        <p>
+            <img src="{{ url_for('static', filename='tmp.png') }}">
+        </p>
+        <footer>
+            <a href="{{ url_for('about') }}">About</a>
+        </footer>
+    </div>
+</body>
+{% endblock %}

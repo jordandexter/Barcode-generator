@@ -1,0 +1,12 @@
+<!-- This file defines the basic structure of the web application. Each url
+     of the application follows the same basic layout, with exceptions located in the 
+     content block. -->
+
+<html>
+<title>Dev</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+    {% block content %}{% endblock %}
+</div>
+</html>
